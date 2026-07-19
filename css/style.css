@@ -9,6 +9,8 @@ body{
     background:#0f172a;
     color:white;
 }
+
+
 .header{
     display:flex;
     justify-content:space-between;
@@ -360,12 +362,12 @@ body{
     padding: 12px 20px;
     border-radius: 8px;
     font-weight: bold;
-    transition: 3s;
+    transition: .3s;
 }
 
 .project-overlay a:hover{
     background: #ffffff;
-    transforme : translateY(-3px);
+    transform : translateY(-3px);
 }
 
 .project-overlay{
@@ -420,10 +422,6 @@ body{
 }
 
                     /*SECTION 5*/
-
-/* ==========================
-   CONTACT SECTION
-========================== */
 
 .contact{
     padding:80px 20px;
@@ -499,4 +497,86 @@ body{
 .contact button:hover{
     transform:translateY(-4px);
     background:#0ea5e9;
+}
+
+
+                /*RESPONSIVE TABLET & MOBILE*/
+
+@media (max-width: 768px){
+
+    /* Header */
+
+    .header{
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .navigation ul{
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Hero */
+
+    .hero{
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero-content,
+    .hero-image{
+        width: 100%;
+    }
+
+    .hero-image img{
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .hero-buttons{
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    /* Skills */
+
+    .learning-grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    /* Projects */
+
+    .projects-grid{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    /* Roadmap */
+
+    .roadmap-item{
+        flex-direction: column;
+        gap: 15px;
+        margin-left: 55px;
+        
+    }
+
+    .roadmap-year{
+        width: auto;
+    }
+
+    /* Contact */
+
+    .contact form{
+        max-width: 100%;
+    }
+
+    .form-group input,
+    .form-group textarea{
+        width: 100%;
+    }
+
 }
